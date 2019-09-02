@@ -1,0 +1,16 @@
+<div *ngFor="let product of products">
+    {{ product.name }} - {{ product.price }}
+    <div *ngIf="product.available">
+        <button>Buy</button>
+    </div>
+    <div class="clsNA" *ngIf="product.available==false">
+        <span>Not Available</span>
+    </div>
+</div>
+<hr>
+<div>Fetch Employee list</div>
+<hr>
+<!-- [{"id":"82396","employee_name":"John Elia007","employee_salary":"68734","employee_age":"95","profile_image":""}, -->
+<div *ngFor="let employee of employees">
+    {{ employee.employee_name }} {{ ' - '+employee.id }}
+</div>
